@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+           
+            <h2>chandraleka </h2>
+            <p>I'm a college student and I'm studying final year BCA</p>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+        </ul>
+    </nav>
+    <section id="about">
+        <div class="section-content">
+           <h2>About Me</h2>
+           <p>Hello everyone I'm chandraleka and I'm studying Bachelor of Computer Applications(BCA) in Bon Secours College for Women</p>
+        </div>
+    </section>
+    <section id="education">
+        <div class="section-content">
+            <h2>Education</h2>
+            <p>I completed my schooling in little rose metric higher secondary school and I also got 81% in my higher studies</p>
+        </div>
+    </section>
+    <section id="skills">
+        <div class="section-content">
+          <h2>Skills</h2>
+          <ul>
+            <li>Java</li>
+            <li>Css</li>
+            <li>Html</li>
+            <li>Data Base</li>
+            <li>Typing</li>
+          </ul>
+        </div>
+    </section>
+    <section id="projects">
+        <div class="section-content">
+            <h2>Projects</h2>
+            <ul>
+                <li>project 1</li>
+                <li>>project 2</li>
+            </ul>
+        </div>
+    </section>
+    <section id="resume">
+        <center>
+        <div class="section-content">
+          <h2>Resume</h2>
+          
+        </div>
+        </center>
+    </section>
+    <footer>
+        <p>&copy; chandraleka</p>
+    </footer>
+    <script>
+      document.querySelectorAll('a [href^="#"]').forEach(anchor=>{
+        anchor.addEventListener('click',function(e){
+           e.preventDefault();
+         const targetId =this.getAttribute('href').substring(1);
+         const targetElement = document.getElementById(targetId);
+         if(targetElement){
+            window.scrollTo({
+                top:targetElement.offsetTop,
+                behavior:"smooth"
+            })
+         }
+        })
+      })
+    </script>
+</body>
+</html>
